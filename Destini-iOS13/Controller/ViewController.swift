@@ -23,9 +23,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func choiceMade(_ sender: UIButton) {
-        if sender.currentTitle == storyBrain.getButton1Title(){
-            
-        }
+        storyBrain.nextQuestion(choice: sender.currentTitle!)
+        
+        loadUI()
     }
     
     func loadUI(){

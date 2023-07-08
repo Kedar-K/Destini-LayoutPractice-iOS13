@@ -29,6 +29,14 @@ struct StoryBrain {
     func getButton2Title() -> String {
         return stories[storyNumber].choice2
     }
+    
+    mutating func nextQuestion(choice: String) -> Void {
+        if choice == stories[storyNumber].choice1 {
+            storyNumber += 1
+        }else{
+            storyNumber += 2
+        }
+    }
 
 }
 
